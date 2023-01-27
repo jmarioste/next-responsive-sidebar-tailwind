@@ -15,7 +15,14 @@ module.exports = {
         DEFAULT: "1rem",
       },
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        sidebar: "300px auto",
+      },
+      gridTemplateRows: {
+        header: "64px auto",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
