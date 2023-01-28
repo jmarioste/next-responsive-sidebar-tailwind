@@ -11,7 +11,7 @@ const Layout = (props: PropsWithChildren) => {
       </div>
 
       <div className="grid md:grid-cols-sidebar ">
-        <Sidebar open={sidebarOpen} />
+        <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
         {props.children}
       </div>
     </div>

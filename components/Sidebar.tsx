@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 import Image from "next/image";
 import { defaultNavItems } from "./defaultNavItems";
+import { useOnClickOutside } from "usehooks-ts";
 export type NavItem = {
   label: string;
   href: string;
@@ -12,9 +13,14 @@ export type NavItem = {
 type Props = {
   open: boolean;
   navItems?: NavItem[];
+  setOpen(open: boolean): void;
 };
 
-const Sidebar = ({ open, navItems = defaultNavItems }: Props) => {
+const Sidebar = ({ open, navItems = defaultNavItems, setOpen }: Props) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useOnClickOutside(ref, (e) => {
+    setOpen(false);
+  });
   return (
     <div
       className={classNames({
@@ -25,6 +31,7 @@ const Sidebar = ({ open, navItems = defaultNavItems }: Props) => {
         "transition-transform .3s ease-in-out md:-translate-x-0": true, //animations
         "-translate-x-full ": !open, //hide sidebar to the left when closed
       })}
+      ref={ref}
     >
       <nav className="md:sticky top-0 md:top-16">
         {/* nav items */}
