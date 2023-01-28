@@ -5,7 +5,7 @@ type Props = {
 };
 const Navbar = (props: Props) => {
   return (
-    <nav className="w-full bg-gray-800 h-16 text-zinc-50 fixed z-10 flex items-center px-4">
+    <nav className="w-full bg-white h-16 text-zinc-500 fixed z-10 flex items-center px-4 shadow-sm">
       <div className="font-bold text-lg">My Logo</div>
       <div className="flex-grow"></div>
       <button className="md:hidden" onClick={props.onMenuButtonClick}>
