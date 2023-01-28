@@ -6,12 +6,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-      },
-    },
     extend: {
       gridTemplateColumns: {
         sidebar: "300px auto",
