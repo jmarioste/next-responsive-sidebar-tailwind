@@ -4,18 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { defaultNavItems } from "./defaultNavItems";
 import { useOnClickOutside } from "usehooks-ts";
+// define a NavItem prop
 export type NavItem = {
   label: string;
   href: string;
   icon: React.ReactNode;
 };
-
+// add NavItem prop to component prop
 type Props = {
   open: boolean;
   navItems?: NavItem[];
   setOpen(open: boolean): void;
 };
-
 const Sidebar = ({ open, navItems = defaultNavItems, setOpen }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, (e) => {
@@ -77,5 +77,4 @@ const Sidebar = ({ open, navItems = defaultNavItems, setOpen }: Props) => {
     </div>
   );
 };
-
 export default Sidebar;
