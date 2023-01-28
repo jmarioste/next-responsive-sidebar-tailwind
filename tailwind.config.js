@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        sidebar: "300px auto",
+        sidebar: "300px auto", //for sidebar layout
       },
       gridTemplateRows: {
-        header: "64px auto",
+        header: "64px auto", //for the navbar layout
       },
     },
   },
