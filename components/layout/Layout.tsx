@@ -10,7 +10,7 @@ const Layout = (props: PropsWithChildren) => {
         <Navbar onMenuButtonClick={() => setSidebarOpen((prev) => !prev)} />
       </div>
 
-      <div className="grid md:grid-cols-sidebar ">
+      <div className="grid md:grid-cols-sidebar">
         <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
         {props.children}
       </div>
