@@ -11,7 +11,6 @@
   "dependencies": {
     "@heroicons/react": "^2.0.14",
     "classnames": "^2.3.2",
-    "daisyui": "^2.42.1",
     "next": "13.0.5",
     "next-auth": "^4.17.0",
     "react": "18.2.0",
