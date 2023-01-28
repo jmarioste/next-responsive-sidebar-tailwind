@@ -1,11 +1,18 @@
 import React from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import classNames from "classnames";
 type Props = {
   onMenuButtonClick(): void;
 };
 const Navbar = (props: Props) => {
   return (
-    <nav className="w-full bg-white h-16 text-zinc-500 fixed z-10 flex items-center px-4 shadow-sm">
+    <nav
+      className={classNames({
+        "bg-white text-zinc-500": true, // colors
+        "flex items-center": true, // layout
+        "w-full fixed z-10 px-4 shadow-sm h-16": true, //positioning & styling
+      })}
+    >
       <div className="font-bold text-lg">My Logo</div>
       <div className="flex-grow"></div>
       <button className="md:hidden" onClick={props.onMenuButtonClick}>
